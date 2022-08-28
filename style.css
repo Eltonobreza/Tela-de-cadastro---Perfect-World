@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    background-image: url(./Imagens/Background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.Container{
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: space-around;
+
+
+}
+
+.Card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 386px;
+    height: 480px;
+    background-color:#fff;
+    border-radius: 20px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.Container .Card-body::after{
+    content: "";
+    position:absolute;
+    top: -3.1px;
+    left: -2.9px;
+    width: 399px;
+    height: 490px;
+    border-radius: 20px;
+    background: linear-gradient(#F27405,#CD77F2,#190D26);
+    z-index: -1;
+    animation: animate 3s linear infinite;
+
+    
+
+}
+
+@keyframes animate{
+    0% {
+        filter:hue-rotate(0deg) brightness(100%) blur(10px);
+    }
+
+    100% {
+        filter:hue-rotate(360deg) brightness(100%) blur(10px);
+    }
+}
+.Card-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    color: #190D26;
+    
+    
+}
+
+
+
+input{
+
+    border: solid 10px #fff;
+    font-weight: bold;
+    border-bottom: 1px solid #190D26;
+    font-size: 15px;
+    outline: 0;
+    opacity: .5;
+    padding: 7px;
+    color:#190D26;
+    
+}
+
+button{
+    border: solid 20px;
+    padding: 5px;
+    width: 250px;
+    border-style: none;
+    font-size: 20px;
+    background-color: #190D26 ;
+    align-items: center;
+    color: #fff;
+    box-shadow: 2px 5px 3px #190D26;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #F27405;
+    transition: .5s;
+    
+}
